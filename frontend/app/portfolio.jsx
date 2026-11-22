@@ -1,7 +1,7 @@
 import SiteHeader from "./site-header";
 import FullTimeTenure from "./full-time-tenure";
 
-const sectionOrder = ["experience", "projects", "skills", "credentials"];
+const sectionOrder = ["experience", "projects", "skills", "credentials", "about"];
 
 export default function Portfolio() {
   return (
@@ -192,8 +192,19 @@ function About() {
   return (
     <section className="section shell about" id="about" aria-labelledby="about-title" tabIndex={-1}>
       <div className="section-head"><p className="eyebrow">About</p><h2 id="about-title">A bit about me.</h2></div>
-      <div><p>I studied Computer Science and Cyber Security at MLR Institute of Technology. Before working on healthcare billing, I explored web security and frontend development and taught data structures and algorithms.</p><p className="small">B.Tech · MLR Institute of Technology · 2020–2024</p>
-        <h3>Coding profiles</h3><div className="profile-links"><a href="https://leetcode.com/u/20r21a6218/">LeetCode</a><a href="https://www.codechef.com/users/jaswanth_11">CodeChef</a><a href="https://www.hackerrank.com/profile/20r21a6218">HackerRank</a><a href="https://smartinterviews.in/profile/jaswanth_m">Smart Interviews</a></div>
+      <div className="about-content">
+        <p>I’m passionate about <strong>building backend systems and mentoring people who are learning to code.</strong> At UST HealthProof, I turn rules about invoices, payments, and billing adjustments into Java services.</p>
+        <p>At Smart Interviews, I worked with more than 100 students on data structures and algorithms. I helped them break down problems and understand why an approach worked, so they could solve the next one on their own.</p>
+        <p className="small">B.Tech in Computer Science and Cyber Security · MLR Institute of Technology · 2020–2024</p>
+        <h3>Outside work</h3>
+        <p>I love photography, travelling, and spending time with the people I’m closest to.</p>
+        <h3>Coding profiles</h3>
+        <div className="profile-links">
+          <a href="https://leetcode.com/u/20r21a6218/">LeetCode</a>
+          <a href="https://www.codechef.com/users/jaswanth_11">CodeChef</a>
+          <a href="https://www.hackerrank.com/profile/20r21a6218">HackerRank</a>
+          <a href="https://smartinterviews.in/profile/jaswanth_m">Smart Interviews</a>
+        </div>
       </div>
     </section>
   );

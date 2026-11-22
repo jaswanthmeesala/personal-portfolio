@@ -7,6 +7,7 @@ const labels = {
   projects: "Projects",
   skills: "Skills",
   credentials: "Achievements",
+  about: "About me",
   contact: "Contact",
 };
 
@@ -87,12 +88,9 @@ export default function SiteHeader({ sectionOrder }) {
   return (
     <header className="header sticky top-0 z-[4]" onKeyDown={handleKeyDown}>
       <div className="shell header-inner">
-        <div className="header-shortcuts">
-          <a className="brand" href="#home" aria-label="Back to top">
-            <span className="monogram" aria-hidden="true">JM</span>
-          </a>
-          <a className="header-about" href="#about" onClick={jumpToAbout}>About me</a>
-        </div>
+        <a className="brand" href="#home" aria-label="Back to top">
+          <span className="monogram" aria-hidden="true">JM</span>
+        </a>
         <button ref={menuButton} className="menu" type="button" aria-expanded={menuOpen}
           aria-controls="navigation" onClick={() => setMenuOpen(open => !open)}>
           Menu
@@ -102,7 +100,7 @@ export default function SiteHeader({ sectionOrder }) {
             <a key={id} href={`#${id}`}
               className={id === "contact" ? "nav-contact" : undefined}
               aria-current={currentSection === id ? "location" : undefined}
-              onClick={() => navigateToSection(id)}>
+              onClick={id === "about" ? jumpToAbout : () => navigateToSection(id)}>
               {labels[id]}
             </a>
           ))}

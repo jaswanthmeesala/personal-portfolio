@@ -16,9 +16,8 @@
 .showcase .header .brand, .showcase .header .menu, .showcase .header nav a { color: #fbf7ff; }
 .showcase .header .menu, .showcase .header .nav-contact { border-color: #7e698f; }
 .showcase .monogram { background: #d8baff; color: #221432; }
-.header-shortcuts { display: flex; align-items: center; gap: 14px; }
-.header-about { color: #e5d4f7; font-size: .875rem; font-weight: 650; }
-.header-about:hover { color: white; }
+.about-content > p + p { margin-top: 12px; }
+.about-content strong { color: var(--ink); }
 
 .showcase-hero {
   background: var(--dark);
